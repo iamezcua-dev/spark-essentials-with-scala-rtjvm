@@ -19,8 +19,9 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   // logging
-  "org.apache.logging.log4j" % "log4j-api" % "2.4.1",
-  "org.apache.logging.log4j" % "log4j-core" % "2.4.1",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "org.codehaus.groovy" % "groovy" % "3.0.7",
   // postgres for DB connectivity
   "org.postgresql" % "postgresql" % postgresVersion
-)
+).map( _.exclude( "org.slf4j", "slf4j-log4j12" ) )
