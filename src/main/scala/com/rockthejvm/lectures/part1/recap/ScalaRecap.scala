@@ -106,7 +106,6 @@ class ScalaRecap extends LazyLogging {
   implicit class Dog(name: String) {
     def bark(): Unit = println("Bark!")
   }
-  
   "Lassie".bark
   
   /*
