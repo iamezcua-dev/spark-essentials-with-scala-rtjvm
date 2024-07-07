@@ -2,14 +2,18 @@ package com.rockthejvm.lectures.part1.recap
 
 import com.typesafe.scalalogging.LazyLogging
 
+import scala.annotation.unused
+
 class ScalaRecap extends LazyLogging {
   // values and variables
   val aBoolean: Boolean = false
   
   // expressions
+  @unused
   val anIfExpression = if (2 < 3) "bigger" else "smaller"
   
   // instructions vs expressions
+  @unused
   val theUnit = println("Hello, Scala") // Unit = no meaningful value or void in other languages
   
   // functions
@@ -17,7 +21,6 @@ class ScalaRecap extends LazyLogging {
   
   // OOP
   class Animal
-  
   class Cat extends Animal
   
   trait Carnivore {
@@ -63,7 +66,6 @@ class ScalaRecap extends LazyLogging {
   }
   
   // Futures
-  
   import scala.concurrent.ExecutionContext.Implicits.global
   import scala.concurrent.Future
   import scala.util.{Failure, Success}
@@ -98,7 +100,6 @@ class ScalaRecap extends LazyLogging {
   }
   
   implicit def fromStringToPerson(name: String) = Person(name)
-  
   "Bob".greet
   
   // implicit conversion - implicit classes
