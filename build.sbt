@@ -12,7 +12,6 @@ resolvers += "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/
 resolvers += "Typesafe Simple Repository" at "https://repo.typesafe.com/typesafe/simple/maven-releases"
 resolvers += "MavenRepository" at "https://mvnrepository.com"
 
-
 libraryDependencies ++= Seq(
   // Apache Spark
   "org.apache.spark" %% "spark-core" % sparkVersion,
