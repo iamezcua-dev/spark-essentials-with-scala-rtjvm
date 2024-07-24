@@ -8,11 +8,9 @@ val postgresVersion = "42.7.3"
 val scalaLoggingVersion = "3.9.5"
 val log4jApiScalaVersion = "13.1.0"
 
-resolvers ++= Seq(
-  "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven",
-  "Typesafe Simple Repository" at "https://repo.typesafe.com/typesafe/simple/maven-releases",
-  "MavenRepository" at "https://mvnrepository.com"
-)
+resolvers += "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven"
+resolvers += "Typesafe Simple Repository" at "https://repo.typesafe.com/typesafe/simple/maven-releases"
+resolvers += "MavenRepository" at "https://mvnrepository.com"
 
 
 libraryDependencies ++= Seq(
