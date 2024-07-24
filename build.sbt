@@ -1,12 +1,12 @@
-name := "spark-essentials"
-
+name := "spark-essentials-with-scala-rtjvm"
 version := "0.1"
+scalaVersion := "2.13.14"
 
-scalaVersion := "2.12.10"
-
-val sparkVersion = "3.0.1"
+val sparkVersion = "3.5.1"
 val vegasVersion = "0.3.11"
-val postgresVersion = "42.2.2"
+val postgresVersion = "42.7.3"
+val scalaLoggingVersion = "3.9.5"
+val log4jApiScalaVersion = "13.1.0"
 
 resolvers ++= Seq(
   "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven",
@@ -16,11 +16,14 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
+  // Apache Spark
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
-  // logging
-  "org.apache.logging.log4j" % "log4j-api" % "2.4.1",
-  "org.apache.logging.log4j" % "log4j-core" % "2.4.1",
-  // postgres for DB connectivity
+  
+  // Logging
+  "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion,
+  "org.apache.logging.log4j" %% "log4j-api-scala" % log4jApiScalaVersion,
+  
+  // PostgreSQL
   "org.postgresql" % "postgresql" % postgresVersion
 )
