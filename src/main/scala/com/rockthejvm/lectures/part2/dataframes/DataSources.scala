@@ -1,4 +1,4 @@
-package part2dataframes
+package com.rockthejvm.lectures.part2.dataframes
 
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.{ SaveMode, SparkSession }
