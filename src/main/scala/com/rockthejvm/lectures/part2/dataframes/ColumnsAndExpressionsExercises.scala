@@ -1,4 +1,4 @@
-package part2dataframes
+package com.rockthejvm.lectures.part2.dataframes
 
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.spark.sql.SparkSession

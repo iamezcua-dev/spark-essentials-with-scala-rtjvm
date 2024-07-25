@@ -1,9 +1,9 @@
-package part2dataframes
+package com.rockthejvm.lectures.part2.dataframes
 
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.spark.sql.{ SaveMode, SparkSession }
 import org.apache.spark.sql.types._
-import part2dataframes.DataSources.{ carsSchema, spark }
+import DataSources.{ carsSchema, spark }
 
 object DataSourcesPart2 extends App with LazyLogging {
   val spark = SparkSession.builder
